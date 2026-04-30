@@ -126,6 +126,15 @@ main a:hover {
   line-height: 1.3;
 }
 
+.placeholder-preview {
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
 /* Metadata and notes */
 
 .meta {
