@@ -8,6 +8,15 @@
   --border: #d8c7b4;
 }
 
+footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 body {
   margin: 0;
   font-family: "Neue Haas Unica", "Helvetica Neue", Arial, sans-serif;
