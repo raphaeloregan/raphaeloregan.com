@@ -192,6 +192,12 @@ main section:first-child p:not(.meta) {
   display: block;
 }
 
+.preview-bubble {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 @media (max-width: 650px) {
   .work-preview-card {
     grid-template-columns: 1fr;
