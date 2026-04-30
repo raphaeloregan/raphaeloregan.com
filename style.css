@@ -216,3 +216,17 @@ main section:first-child p:not(.meta) {
   padding-left: 12px;
   margin-top: 0.5rem;
 }
+
+.mobile-pdf-link {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  iframe {
+    display: none;
+  }
+
+  .mobile-pdf-link {
+    display: inline-block;
+  }
+}
