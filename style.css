@@ -217,20 +217,6 @@ main section:first-child p:not(.meta) {
   margin-top: 0.5rem;
 }
 
-.mobile-pdf-link {
-  display: none;
-}
-
-@media (max-width: 700px) {
-  iframe {
-    display: none;
-  }
-
-  .mobile-pdf-link {
-    display: inline-block;
-  }
-}
-
 .button-link {
   display: inline-block;
   margin-top: 1rem;
@@ -263,7 +249,7 @@ main section:first-child p:not(.meta) {
 }
 
 @media (max-width: 700px) {
-  iframe {
+  .pdf-frame {
     display: none;
   }
 
