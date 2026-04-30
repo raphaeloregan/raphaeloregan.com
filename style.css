@@ -230,3 +230,26 @@ main section:first-child p:not(.meta) {
     display: inline-block;
   }
 }
+
+.button-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 16px;
+
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  border-radius: 999px; /* pill shape */
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.button-link:hover {
+  background: var(--ochre);
+}
+
+.button-link:active {
+  transform: translateY(1px);
+}
