@@ -176,21 +176,20 @@ main section:first-child p:not(.meta) {
   background: var(--paper);
 }
 
-.preview-bubble iframe {
-  width: 100%;
+.preview-bubble {
   height: 210px;
-  margin: 0;
-  border: none;
-  pointer-events: none;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--paper);
 }
 
-.preview-bubble::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 18px;
-  box-shadow: inset 0 0 0 1px var(--border);
-  pointer-events: none;
+.preview-bubble img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
 }
 
 @media (max-width: 650px) {
