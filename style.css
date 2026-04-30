@@ -168,31 +168,21 @@ main section:first-child p:not(.meta) {
   align-items: start;
 }
 
-.preview-bubble {
-  height: 210px;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  background: var(--paper);
-}
-
-.preview-bubble {
-  height: 210px;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  background: var(--paper);
-}
-
 .preview-bubble img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: top;
   display: block;
 }
 
 .preview-bubble {
+  height: 210px;
+  max-width: 220px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--paper);
   display: flex;
   align-items: flex-start;
   justify-content: center;
