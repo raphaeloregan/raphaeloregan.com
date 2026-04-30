@@ -74,6 +74,9 @@ h2 {
   padding: 22px;
   margin-bottom: 18px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card:hover {
