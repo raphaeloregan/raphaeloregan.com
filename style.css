@@ -76,6 +76,12 @@ h2 {
   margin-bottom: 18px;
 }
 
+.last-updated {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
 h3 {
   font-size: 1.15rem;
   margin-bottom: 0.4rem;
