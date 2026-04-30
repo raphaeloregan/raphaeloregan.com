@@ -93,3 +93,31 @@ h2 {
   color: var(--muted);
   font-size: 0.95rem;
 }
+iframe {
+  width: 100%;
+  min-height: 800px;
+  margin-top: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(31, 27, 23, 0.08);
+  background: var(--paper);
+}
+
+main a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+main a:hover {
+  color: var(--ochre);
+}
+
+.work-intro {
+  color: var(--muted);
+  max-width: 680px;
+}
+
+.pdf-link {
+  display: inline-block;
+  margin-top: 1rem;
+}
