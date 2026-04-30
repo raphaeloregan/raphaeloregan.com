@@ -155,3 +155,8 @@ main section:first-child p:not(.meta) {
   letter-spacing: 0.08em;
   font-size: 0.75rem;
 }
+
+.status {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
