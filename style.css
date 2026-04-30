@@ -124,3 +124,34 @@ main a:hover {
   display: inline-block;
   margin-top: 1rem;
 }
+/* Subtle academic typography improvements */
+
+h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.meta {
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+main section:first-child p:not(.meta) {
+  font-size: 1.05rem;
+  max-width: 720px;
+}
+
+.card h3 {
+  line-height: 1.3;
+}
+
+/* “Coming soon” / status styling */
+
+.status {
+  color: var(--ochre);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+}
