@@ -253,3 +253,25 @@ main section:first-child p:not(.meta) {
 .button-link:active {
   transform: translateY(1px);
 }
+
+.mobile-pdf-link {
+  display: none;
+}
+
+.desktop-pdf-link {
+  display: inline-block;
+}
+
+@media (max-width: 700px) {
+  iframe {
+    display: none;
+  }
+
+  .desktop-pdf-link {
+    display: none;
+  }
+
+  .mobile-pdf-link {
+    display: inline-block;
+  }
+}
