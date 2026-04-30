@@ -189,8 +189,8 @@ main a:hover {
 }
 
 .preview-bubble {
-  width: 160px;
-  height: 210px;
+  width: 150px;
+  height: 150px;
   border-radius: 18px;
   overflow: hidden;
   border: 1px solid var(--border);
