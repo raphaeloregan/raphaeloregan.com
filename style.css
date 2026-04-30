@@ -83,6 +83,9 @@ h2 {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(31, 27, 23, 0.08);
 }
+.card:active {
+  transform: translateY(-1px);
+}
 
 .card h3 {
   margin-top: 0;
