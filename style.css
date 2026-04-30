@@ -160,3 +160,38 @@ main section:first-child p:not(.meta) {
   display: inline-block;
   margin-top: 0.5rem;
 }
+
+.work-preview-card {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.preview-bubble {
+  height: 210px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--paper);
+}
+
+.preview-bubble iframe {
+  width: 100%;
+  height: 260px;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+@media (max-width: 650px) {
+  .work-preview-card {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-bubble {
+    max-width: 220px;
+  }
+}
