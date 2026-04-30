@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>River Water Nitrate Analysis | Raphael O'Regan</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Raphael O'Regan</h1>
+    <nav>
+      <a href="../">Home</a>
+      <a href="../work/">Academic Work</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>River Water Nitrate Analysis</h2>
+      <p class="meta">Ecology and Environmental Science</p>
+
+      <p>
+        This lab report investigates nitrate concentrations in river water near agricultural land,
+        using a Griess assay and calibration curve to assess potential environmental impact.
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>Coming soon</h3>
+      <p>
+        This report will be uploaded once marking has been completed.
+      </p>
+    </section>
+  </main>
+
+</body>
+</html>
