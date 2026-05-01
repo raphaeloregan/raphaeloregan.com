@@ -78,6 +78,15 @@ header {
   color: white;
 }
 
+.interests {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.interests li::marker {
+  color: var(--accent);
+}
+
 .paper-header .work-intro,
 .paper-header .note,
 .paper-header .last-updated {
