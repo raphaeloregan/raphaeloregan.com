@@ -208,7 +208,7 @@ main a:hover {
 }
 
 .paper-header p:not(.meta):not(.status) {
-  text-align: centre;
+  text-align: center;
   margin-top: 1.5rem;
 }
 
