@@ -49,6 +49,35 @@ header {
   border-radius: 0 0 16px 16px;
 }
 
+.hero {
+  text-align: center;
+  padding: 80px 24px 60px;
+}
+
+.hero .tagline {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button-link.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.button-link.secondary:hover {
+  background: var(--accent);
+  color: white;
+}
+
 .paper-header .work-intro,
 .paper-header .note,
 .paper-header .last-updated {
