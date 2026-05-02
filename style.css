@@ -446,3 +446,13 @@ footer a:hover {
   color: var(--muted);
   opacity: 0.8;
 }
+
+.ascii-art {
+  font-family: monospace;
+  white-space: pre;
+  text-align: center;
+  color: var(--accent);
+  font-size: 0.75rem;
+  line-height: 1;
+  overflow-x: auto;
+}
