@@ -442,9 +442,12 @@ footer a:hover {
 .ascii-art {
   font-family: monospace;
   white-space: pre;
-  text-align: center;
+  display: inline-block;
+  text-align: left;
   color: var(--accent);
   font-size: 0.75rem;
   line-height: 1;
-  overflow-x: auto;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
 }
