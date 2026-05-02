@@ -440,14 +440,6 @@ footer a:hover {
 }
 
 .ascii-art {
-  text-align: center;
-  margin-top: 20px;
-  font-family: monospace;
-  color: var(--muted);
-  opacity: 0.8;
-}
-
-.ascii-art {
   font-family: monospace;
   white-space: pre;
   text-align: center;
