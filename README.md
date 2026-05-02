@@ -1,2 +1,0 @@
-# raphaeloregan.com
-Portfolio
