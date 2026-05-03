@@ -445,9 +445,9 @@ footer a:hover {
   display: inline-block;
   text-align: left;
   color: var(--accent);
-  font-size: 0.75rem;
+  font-size: clamp(0.38rem, 1.9vw, 0.75rem);
   line-height: 1;
-  overflow: hidden;
+  overflow-x: auto;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -468,4 +468,12 @@ footer a:hover {
 .icon-link svg {
   width: 1.1rem;
   height: 1.1rem;
+}
+
+.cv-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
