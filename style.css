@@ -447,9 +447,15 @@ footer a:hover {
   color: var(--accent);
   font-size: clamp(0.38rem, 1.9vw, 0.75rem);
   line-height: 1;
-  overflow-x: auto;
+  overflow-y: scroll;
+  -ms-overflower-style:none;
+  scrollbar-width: none;
+  div::-webkit-scrollbar {
+    display: none;
+  }
   max-width: 100%;
   margin: 0 auto;
+  
 }
 
 
