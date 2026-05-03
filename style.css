@@ -473,6 +473,7 @@ footer a:hover {
 .cv-actions {
   margin-top: 16px;
   display: flex;
+  align-items: center;
   gap: 12px;
   flex-wrap: wrap;
   justify-content: flex-start;
