@@ -19,7 +19,7 @@
   text-align: inherit; /* This makes it match your main title alignment automatically */
 }
 
-/* Container to establish the absolute coordinate system */
+* Container to establish the absolute coordinate system */
 .name-trigger {
   position: relative;
   display: inline-block;
@@ -36,38 +36,37 @@
 .ir-suffix-layer {
   position: absolute;
   top: 0;
-  color: #1E4620; /* High-contrast rich forest green */
+  color: #1E4620; /* Matches your rich green */
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  pointer-events: none; /* Prevents text selection glitches */
-  background: #E8D8CE; /* Matches your exact cream background color to mask the text underneath */
+  pointer-events: none; /* Prevents cursor interference */
+  /* REMOVED the cream background property completely so there are no ugly squares */
 }
 
 /* ==========================================================================
-   FINE-TUNING CONTROLS (Adjust these values based on your specific font)
+   THE NEW ACCURATE POSITION TRACKS (Using percentages instead of EM)
    ========================================================================== */
 
-/* 1. Positioning the Ó directly over the O' */
+/* 1. Placing the Ó directly over the O' */
 .ir-o-layer {
-  left: 8.35em; /* Slide this left or right until it covers the 'O'' perfectly */
-  padding-right: 0.15em; /* Masks the trailing apostrophe space */
+  left: 54.5%; /* This targets the middle area right where your O sits */
 }
 
-/* 2. Positioning the 'agáin' suffix directly over the 'gan' */
+/* 2. Placing the 'agáin' suffix directly over the 'gan' */
 .ir-suffix-layer {
-  left: 10.32em; /* Slide this left or right until the 'a' hits the exact start position of the old 'g' */
+  left: 77.2%; /* This targets the end zone right where your g starts */
 }
 
 /* ==========================================================================
    Hover Triggers
    ========================================================================== */
 .name-trigger:hover .legal-text-base {
-  color: #1E4620; /* Turns Raphael and the 'R' green smoothly */
+  color: #1E4620; /* Turns your entire base name green */
 }
 
 .name-trigger:hover .ir-o-layer,
 .name-trigger:hover .ir-suffix-layer {
-  opacity: 1; /* Reveals the perfectly positioned Irish fragments */
+  opacity: 1; /* Fades the Irish modifications smoothly on top */
 }
 
 body {
