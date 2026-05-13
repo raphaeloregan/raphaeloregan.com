@@ -31,7 +31,7 @@
 .name-legal, 
 .name-gaelic {
   grid-area: 1 / 1 / 2 / 2;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out; color 0.3s ease-in-out;
 }
 
 /* Default visibility states */
@@ -41,7 +41,7 @@
 
 .name-gaelic {
   opacity: 0;
-  color: #019529;       /* Optional: A subtle shift in color */
+  color: #019529;       /* irish green */
 }
 
 /* The Hover Effect */
