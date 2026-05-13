@@ -19,37 +19,61 @@
   text-align: inherit; /* This makes it match your main title alignment automatically */
 }
 
-/* Container for the surname that handles the layout stack */
-.surname-trigger {
+/* Container to keep the surname group together */
+.surname-box {
+  display: inline-flex;
+}
+
+/* 1. Handle the 'O' shifting to 'Ó' */
+.char-o {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+h1:hover .char-o {
+  color: #4A5D4E; /* Sage Green */
+}
+h1:hover .char-o::before {
+  content: attr(data-hover);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #4A5D4E;
+  background: #E8D8CE; /* Matches your exact cream background color to mask the old O' */
+  width: 100%;
+}
+
+/* 2. Handle the 'R' just changing color cleanly */
+.char-r {
+  transition: color 0.3s ease-in-out;
+}
+h1:hover .char-r {
+  color: #4A5D4E;
+}
+
+/* 3. Handle the suffix swapping stack without layout shifting */
+.suffix-trigger {
   display: inline-grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  vertical-align: top;
 }
-
-/* Base styles for both names so they sit perfectly on top of each other */
-.name-legal, 
-.name-gaelic {
+.suffix-legal, 
+.suffix-gaelic {
   grid-area: 1 / 1 / 2 / 2;
-  transition: opacity 0.3s ease-in-out; color 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-
-/* Default visibility states */
-.name-legal {
+.suffix-legal {
   opacity: 1;
 }
-
-.name-gaelic {
+.suffix-gaelic {
   opacity: 0;
-  color: #019529;       /* irish green */
+  color: #4A5D4E;
 }
 
-/* The Hover Effect */
-h1:hover .name-legal {
+/* Hover triggers for the suffixes */
+h1:hover .suffix-legal {
   opacity: 0;
 }
-
-h1:hover .name-gaelic {
+h1:hover .suffix-gaelic {
   opacity: 1;
 }
 
