@@ -19,61 +19,54 @@
   text-align: inherit; /* This makes it match your main title alignment automatically */
 }
 
-/* Container to keep the surname group together */
-.surname-box {
+/* Keep the entire surname flowing naturally inline */
+.surname-inline {
   display: inline-flex;
+  align-items: baseline;
 }
 
-/* 1. Handle the 'O' shifting to 'Ó' */
-.char-o {
-  position: relative;
+/* Force the letters to have zero unintended padding or margins */
+.lock-letter {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
   transition: color 0.3s ease-in-out;
 }
-h1:hover .char-o {
-  color: #4A5D4E; /* Sage Green */
-}
-h1:hover .char-o::before {
-  content: attr(data-hover);
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #4A5D4E;
-  background: #E8D8CE; /* Matches your exact cream background color to mask the old O' */
-  width: 100%;
-}
 
-/* 2. Handle the 'R' just changing color cleanly */
-.char-r {
-  transition: color 0.3s ease-in-out;
-}
-h1:hover .char-r {
-  color: #4A5D4E;
-}
-
-/* 3. Handle the suffix swapping stack without layout shifting */
-.suffix-trigger {
+/* The magic fix: This forces the grid to only be exactly as wide as the longest text */
+.suffix-grid {
   display: inline-grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  margin-left: -0.04em; /* Pulls the text slightly left to fix the 'R' spacing gap */
 }
-.suffix-legal, 
-.suffix-gaelic {
+
+.suffix-eng, 
+.suffix-gae {
   grid-area: 1 / 1 / 2 / 2;
   transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-.suffix-legal {
+
+/* Default state styling */
+.suffix-eng {
   opacity: 1;
 }
-.suffix-gaelic {
+
+.suffix-gae {
   opacity: 0;
-  color: #4A5D4E;
+  color: #1E4620; /* High-contrast rich forest green */
 }
 
-/* Hover triggers for the suffixes */
-h1:hover .suffix-legal {
+/* Hover State Animations */
+h1:hover .lock-letter {
+  color: #1E4620; /* Changes the O'R to match the green seamlessly */
+}
+
+h1:hover .suffix-eng {
   opacity: 0;
 }
-h1:hover .suffix-gaelic {
+
+h1:hover .suffix-gae {
   opacity: 1;
 }
 
