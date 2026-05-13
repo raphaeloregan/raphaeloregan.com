@@ -12,8 +12,8 @@
 .gaelic-tag {
   font-size: 0.85rem;
   letter-spacing: 0.3em;
-  color: #666;
-  font-weight: 500;
+  color: #7b2d26;
+  font-weight: 550;
   display: block;
   margin-bottom: 0.5rem;
   text-align: inherit; /* This makes it match your main title alignment automatically */
@@ -41,7 +41,6 @@
 
 .name-gaelic {
   opacity: 0;
-  font-weight: 400; /* Optional: Slightly lighter weight for the Irish spelling */
   color: #b9822f;       /* Optional: A subtle shift in color */
 }
 
