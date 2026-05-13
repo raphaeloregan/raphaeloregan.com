@@ -19,61 +19,42 @@
   text-align: inherit; /* This makes it match your main title alignment automatically */
 }
 
-/* Container to keep the surname group together */
-.surname-box {
-  display: inline-flex;
-}
-
-/* 1. Handle the 'O' shifting to 'Ó' */
-.char-o {
-  position: relative;
-  transition: color 0.3s ease-in-out;
-}
-h1:hover .char-o {
-  color: #4A5D4E; /* Sage Green */
-}
-h1:hover .char-o::before {
-  content: attr(data-hover);
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #4A5D4E;
-  background: #E8D8CE; /* Matches your exact cream background color to mask the old O' */
-  width: 100%;
-}
-
-/* 2. Handle the 'R' just changing color cleanly */
-.char-r {
-  transition: color 0.3s ease-in-out;
-}
-h1:hover .char-r {
-  color: #4A5D4E;
-}
-
-/* 3. Handle the suffix swapping stack without layout shifting */
-.suffix-trigger {
+/* Container holds the space so the page doesn't move */
+.name-container {
   display: inline-grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-}
-.suffix-legal, 
-.suffix-gaelic {
-  grid-area: 1 / 1 / 2 / 2;
-  transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-.suffix-legal {
-  opacity: 1;
-}
-.suffix-gaelic {
-  opacity: 0;
-  color: #4A5D4E;
+  justify-items: center; /* Ensures it stays perfectly centered if your hero is centered */
 }
 
-/* Hover triggers for the suffixes */
-h1:hover .suffix-legal {
+/* Base styles for both headline layers */
+.name-front,
+.name-back {
+  grid-area: 1 / 1 / 2 / 2;
+  margin: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease-in-out;
+  /* Use your existing h1 styles here (font-size, font-family, etc.) */
+}
+
+/* Default state: Legal name is fully visible */
+.name-front {
+  opacity: 1;
+  color: #1a1a1a; /* Your original dark text color */
+}
+
+/* Default state: Irish name is completely hidden directly underneath */
+.name-back {
+  opacity: 0;
+  color: #4A5D4E; /* Your new clean sage green */
+}
+
+/* The Interactive Hover Effect */
+.name-container:hover .name-front {
   opacity: 0;
 }
-h1:hover .suffix-gaelic {
+
+.name-container:hover .name-back {
   opacity: 1;
 }
 
