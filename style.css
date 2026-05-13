@@ -7,6 +7,7 @@
   --ochre: #b9822f;
   --border: #d8c7b4;
   --band: #ead7c7;
+  --irish: #1E4620:
 }
 
 .gaelic-tag {
@@ -16,10 +17,10 @@
   font-weight: 550;
   display: block;
   margin-bottom: 0.5rem;
-  text-align: inherit; /* This makes it match your main title alignment automatically */
+  text-align: inherit; /* This makes it match main title alignment automatically */
 }
 
-* Container to establish the absolute coordinate system */
+/* Container to establish the absolute coordinate system */
 .name-trigger {
   position: relative;
   display: inline-block;
@@ -28,7 +29,16 @@
 /* Base text transition */
 .legal-text-base {
   display: inline-block;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, clip-path 0.3s ease-in-out;
+  /* 1. Default State: Keep the entire legal name perfectly visible */
+  clip-path: inset(0 0 0 0); 
+}
+
+/* 2. Interactive Hover: Cut off the legal text right where the O starts (at 50.2%) */
+.name-trigger:hover .legal-text-base {
+  color: #1E4620; /* Turns your base 'Raphael' and 'R' green */
+  /* This slices away everything to the right of capital O on hover, erasing the apostrophe and 'egan' */
+  clip-path: inset(0 calc(100% - 50.2%) 0 0); 
 }
 
 /* Base setup for both absolute Irish layers */
@@ -36,37 +46,28 @@
 .ir-suffix-layer {
   position: absolute;
   top: 0;
-  color: #1E4620; /* Matches your rich green */
-  opacity: 0;
+  color: #1E4620; 
+  opacity: 0; /* Reset this back to 0 so it hides until hover! */
   transition: opacity 0.3s ease-in-out;
-  pointer-events: none; /* Prevents cursor interference */
-  /* REMOVED the cream background property completely so there are no ugly squares */
+  pointer-events: none; 
 }
-
-/* ==========================================================================
-   THE NEW ACCURATE POSITION TRACKS (Using percentages instead of EM)
-   ========================================================================== */
 
 /* 1. Placing the Ó directly over the O' */
 .ir-o-layer {
-  left: 54.5%; /* This targets the middle area right where your O sits */
+  left: 50.4%; 
 }
 
 /* 2. Placing the 'agáin' suffix directly over the 'gan' */
 .ir-suffix-layer {
-  left: 77.2%; /* This targets the end zone right where your g starts */
+  left: 62.66%; 
 }
 
 /* ==========================================================================
    Hover Triggers
    ========================================================================== */
-.name-trigger:hover .legal-text-base {
-  color: #1E4620; /* Turns your entire base name green */
-}
-
 .name-trigger:hover .ir-o-layer,
 .name-trigger:hover .ir-suffix-layer {
-  opacity: 1; /* Fades the Irish modifications smoothly on top */
+  opacity: 1; /* Fades perfect Irish layers open on hover */
 }
 
 body {
