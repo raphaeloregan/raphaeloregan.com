@@ -19,26 +19,52 @@
   text-align: inherit; /* This makes it match your main title alignment automatically */
 }
 
-/* Keep the entire surname flowing naturally inline */
-.surname-inline {
+/* Container to group everything tight */
+.surname-box {
   display: inline-flex;
   align-items: baseline;
 }
 
-/* Force the letters to have zero unintended padding or margins */
-.lock-letter {
+/* Keeps the O'Re foundational block completely unified */
+.lock-text {
   display: inline-block;
-  margin: 0;
-  padding: 0;
+  position: relative;
   transition: color 0.3s ease-in-out;
 }
 
-/* The magic fix: This forces the grid to only be exactly as wide as the longest text */
+/* The Masking Magic: Hides the apostrophe seamlessly on hover */
+.hidden-apostrophe {
+  transition: color 0.3s ease-in-out;
+}
+h1:hover .hidden-apostrophe {
+  color: #E8D8CE; /* Matches your background cream color perfectly */
+}
+
+/* Adds the fada accent dynamically directly over the O */
+.lock-text::before {
+  content: "́"; /* The standalone combining acute accent */
+  position: absolute;
+  top: -0.12em; /* Adjust this value if the fada sits too high or low */
+  left: 0.15em; /* Adjust this value to center it directly over your letter O */
+  color: #1E4620;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+h1:hover .lock-text::before {
+  opacity: 1;
+}
+
+/* Swaps the entire root group to your new high-contrast green */
+h1:hover .lock-text {
+  color: #1E4620;
+}
+
+/* Suffix Grid Container setup */
 .suffix-grid {
   display: inline-grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  margin-left: -0.04em; /* Pulls the text slightly left to fix the 'R' spacing gap */
+  margin-left: -0.02em; /* Micro-adjusts the connection between 'e' and 'g' if needed */
 }
 
 .suffix-eng, 
@@ -47,25 +73,19 @@
   transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Default state styling */
 .suffix-eng {
   opacity: 1;
 }
 
 .suffix-gae {
   opacity: 0;
-  color: #1E4620; /* High-contrast rich forest green */
+  color: #1E4620;
 }
 
-/* Hover State Animations */
-h1:hover .lock-letter {
-  color: #1E4620; /* Changes the O'R to match the green seamlessly */
-}
-
+/* Core Hover Triggers */
 h1:hover .suffix-eng {
   opacity: 0;
 }
-
 h1:hover .suffix-gae {
   opacity: 1;
 }
