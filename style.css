@@ -19,75 +19,55 @@
   text-align: inherit; /* This makes it match your main title alignment automatically */
 }
 
-/* Container to group everything tight */
-.surname-box {
-  display: inline-flex;
-  align-items: baseline;
-}
-
-/* Keeps the O'Re foundational block completely unified */
-.lock-text {
-  display: inline-block;
+/* Container to establish the absolute coordinate system */
+.name-trigger {
   position: relative;
+  display: inline-block;
+}
+
+/* Base text transition */
+.legal-text-base {
+  display: inline-block;
   transition: color 0.3s ease-in-out;
 }
 
-/* The Masking Magic: Hides the apostrophe seamlessly on hover */
-.hidden-apostrophe {
-  transition: color 0.3s ease-in-out;
-}
-h1:hover .hidden-apostrophe {
-  color: #E8D8CE; /* Matches your background cream color perfectly */
-}
-
-/* Adds the fada accent dynamically directly over the O */
-.lock-text::before {
-  content: "́"; /* The standalone combining acute accent */
+/* Base setup for both absolute Irish layers */
+.ir-o-layer,
+.ir-suffix-layer {
   position: absolute;
-  top: -0.12em; /* Adjust this value if the fada sits too high or low */
-  left: 0.15em; /* Adjust this value to center it directly over your letter O */
-  color: #1E4620;
+  top: 0;
+  color: #1E4620; /* High-contrast rich forest green */
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-}
-h1:hover .lock-text::before {
-  opacity: 1;
-}
-
-/* Swaps the entire root group to your new high-contrast green */
-h1:hover .lock-text {
-  color: #1E4620;
+  pointer-events: none; /* Prevents text selection glitches */
+  background: #E8D8CE; /* Matches your exact cream background color to mask the text underneath */
 }
 
-/* Suffix Grid Container setup */
-.suffix-grid {
-  display: inline-grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  margin-left: -0.02em; /* Micro-adjusts the connection between 'e' and 'g' if needed */
+/* ==========================================================================
+   FINE-TUNING CONTROLS (Adjust these values based on your specific font)
+   ========================================================================== */
+
+/* 1. Positioning the Ó directly over the O' */
+.ir-o-layer {
+  left: 8.35em; /* Slide this left or right until it covers the 'O'' perfectly */
+  padding-right: 0.15em; /* Masks the trailing apostrophe space */
 }
 
-.suffix-eng, 
-.suffix-gae {
-  grid-area: 1 / 1 / 2 / 2;
-  transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+/* 2. Positioning the 'agáin' suffix directly over the 'gan' */
+.ir-suffix-layer {
+  left: 10.32em; /* Slide this left or right until the 'a' hits the exact start position of the old 'g' */
 }
 
-.suffix-eng {
-  opacity: 1;
+/* ==========================================================================
+   Hover Triggers
+   ========================================================================== */
+.name-trigger:hover .legal-text-base {
+  color: #1E4620; /* Turns Raphael and the 'R' green smoothly */
 }
 
-.suffix-gae {
-  opacity: 0;
-  color: #1E4620;
-}
-
-/* Core Hover Triggers */
-h1:hover .suffix-eng {
-  opacity: 0;
-}
-h1:hover .suffix-gae {
-  opacity: 1;
+.name-trigger:hover .ir-o-layer,
+.name-trigger:hover .ir-suffix-layer {
+  opacity: 1; /* Reveals the perfectly positioned Irish fragments */
 }
 
 body {
